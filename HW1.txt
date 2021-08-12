@@ -1,0 +1,76 @@
+Пустая строка при переводе в тип bool всегда False
+Если строка содержит пробел, или любое значение это всегда True
+С числами False будет только преобразовав 0 к bool,
+в остальных случаях при воде любых положительных и отрицательных чисел будет True. 
+
+>>> bool("")
+False
+>>> bool(" ")
+True
+
+
+>>> bool(0)
+False
+>>> bool(-1)
+True
+>>> bool(123)
+True
+>>> bool("%")
+True
+>>> bool(1)
+True
+
+python3 input() всегда возвращает строку.
+
+>>> val = input()
+7
+>>> type(val)
+<class 'str'>
+>>> val = input(1.1)
+1.1
+>>> type(val)
+<class 'str'>
+>>> val = input()
+string
+>>> type(val)
+<class 'str'>
+
+python2 input() возвращает тот тип который был введен с клавиатуры( для 1.1 float, 2 int, 'abc' str)
+
+>>> val = input()
+7.0
+
+>>> type(val)
+<type 'float'>
+
+>>> val = input()
+'abc'
+
+>>> type(val)
+<type 'str'>
+
+>>> val = input()
+1
+>>> type(val)
+<type 'int'>
+
+python2 raw_input() возвращает сктроку независимо от вводимого значения.
+>>> val = raw_input()
+1
+>>> type(val)
+<type 'str'>
+>>> val = raw_input()
+sssss
+>>> type(val)
+<type 'str'>
+>>> val = raw_input()
+1.1
+>>> type(val)
+<type 'str'>
+
+raw_input в python2  и input в python3 возвращают строку независимо от введеных значений.
+
+Прочел спецификацию по print() https://www.python.org/dev/peps/pep-3105/
+print сделали функцией в python3
+print как функцию можно передавать в качестве параметров, в то время как с синтаксической конструкцией такого сделать нельзя.
+Улучшение читабельности кода, упрощение языка.
