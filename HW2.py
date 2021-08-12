@@ -12,5 +12,7 @@
 '''
 
 input_string = input("Введите любые слова, слоги, числа или их комбинации, разделенные пробелом: ")
-result = set(input_string.split())
-print(" ".join(result))
+result_list = list(input_string.split())
+result_set = set(input_string.split())
+print(" ".join(result_list))
+print(" ".join(result_set))
